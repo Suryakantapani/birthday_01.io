@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Andua's Birthday 🦎</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-container">
+        <header>
+            <div class="header-content">
+                <h1>Happy Birthday, Barsa 🎂</h1>
+                <div class="typing" id="typewriter"></div>
+            </div>
+        </header>
+        
+        <section class="countdown-section">
+            <div class="countdown" id="countdown"></div>
+        </section>
+
+        <section class="gallery-section">
+            <div class="photo-carousel-container">
+                <div class="photo-frame left-frame" id="leftPhotoFrame">
+                    <div class="photo-track">
+                        <div class="photo-slide"><img src="andua1.jpeg" alt="Birthday celebration 1" loading="lazy"></div>
+                        <div class="photo-slide"><img src="andua2.jpeg" alt="Birthday cake 2" loading="lazy"></div>
+                        <div class="photo-slide"><img src="andua3.jpeg" alt="Birthday party 3" loading="lazy"></div>
+                        <div class="photo-slide"><img src="andua4.jpeg" alt="Birthday gift 4" loading="lazy"></div>
+                        <div class="photo-slide"><img src="andua5.jpeg" alt="Birthday celebration 1" loading="lazy"></div>
+                        <div class="photo-slide"><img src="andua6.jpeg" alt="Birthday cake 2" loading="lazy"></div>
+                        <div class="photo-slide"><img src="andua7.jpeg" alt="Birthday party 3" loading="lazy"></div>
+                        <div class="photo-slide"><img src="andua1.jpeg" alt="Birthday gift 4" loading="lazy"></div>
+                        <div class="photo-slide"><img src="andua2.jpeg" alt="Birthday cake 2" loading="lazy"></div>
+                       <div class="photo-slide"><img src="andua3.jpeg" alt="Birthday party 3" loading="lazy"></div>
+                       <div class="photo-slide"><img src="andua4.jpeg" alt="Birthday gift 4" loading="lazy"></div>
+                       <div class="photo-slide"><img src="andua5.jpeg" alt="Birthday celebration 1" loading="lazy"></div>
+                       <div class="photo-slide"><img src="andua6.jpeg" alt="Birthday cake 2" loading="lazy"></div>
+                       <div class="photo-slide"><img src="andua7.jpeg" alt="Birthday party 3" loading="lazy"></div>
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="prev-btn" aria-label="Previous photo"><i class="fas fa-chevron-left"></i></button>
+                        <button class="next-btn" aria-label="Next photo"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                
+                <div class="video-section">
+                    <div class="video-container">
+                        <video id="birthdayVideo" autoplay muted loop playsinline>
+                            <source src="jhia.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-caption">Special moments for you! ✨</div>
+                </div>
+                 
+                   
+                </div>
+            </div>
+        </section>
+
+        <section class="message-section">
+            <div class="message-card">
+                <div class="messages" id="messageSlider">You are the sparkle of our lives, Barsa! 🌟</div>
+                <div class="message-indicators" id="messageIndicators"></div>
+            </div>
+        </section>
+
+        <section class="action-section">
+            <button class="btn boom-btn pulse" id="boomButton">
+                <span class="btn-icon"><i class="fas fa-magic"></i></span>
+                <span class="btn-text">Click for Boom!</span>
+            </button>
+        </section>
+
+        <section class="celebration-section">
+            <button class="btn celebrate-btn" id="celebrateButton">
+                <span class="btn-icon"><i class="fas fa-birthday-cake"></i></span>
+                <span class="btn-text">Celebrate!</span>
+            </button>
+        
+            <div id="cartoonContainer" class="cartoon-container">
+                <div class="video-section">
+                    <div class="video-container" style="width: 400px; height: auto; margin: 0 auto;">
+                        <video id="birthdayVideo" controls playsinline width="400" height="auto">
+                            <source src="jhia2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const celebrateButton = document.getElementById("celebrateButton");
+                const birthdayVideo = document.getElementById("birthdayVideo");
+                const cartoonContainer = document.getElementById("cartoonContainer");
+        
+           
+        
+                celebrateButton.addEventListener("click", () => {
+                     cartoonContainer.scrollIntoView({ behavior: "smooth" });
+                    birthdayVideo.currentTime = 0;
+                    birthdayVideo.play();
+                });
+            });
+        </script>
+        
+        <div id="confettiContainer" class="confetti-container"></div>
+    </div>
+
+    <div class="music-controls">
+        <button id="musicToggle" class="music-toggle" aria-label="Toggle music">
+            <i class="fas fa-volume-up"></i>
+        </button>
+        <div class="music-info">
+            <div class="track-name">Birthday Music</div>
+            <div class="volume-slider">
+                <input type="range" id="volumeSlider" min="0" max="100" value="30">
+            </div>
+        </div>
+    </div>
+
+    <audio id="musicPlayer" loop>
+        <source id="musicSource" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+   
+</body>
+</html>
