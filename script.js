@@ -386,3 +386,14 @@ function handleDoubleTap(e) {
 if (checkForReducedMotion()) {
     document.body.classList.add('reduced-motion');
 }
+
+window.addEventListener('load', () => {
+    const music = document.getElementById('musicPlayer');
+    music.play().catch((error) => {
+        const enableAudio = () => {
+            music.play();
+            document.removeEventListener('click', enableAudio);
+        };
+        document.addEventListener('click', enableAudio);
+    });
+});
