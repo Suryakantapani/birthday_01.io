@@ -49,7 +49,7 @@ let touchEndX = 0;
     
      updateCountdown();
     setInterval(updateCountdown, 1000);
-     setTimeout(() => typeWriter("aka my sweet younger sister 🦎 💕"), 1000);
+     setTimeout(() => typeWriter("aka my sweet sister Andua 🦎 💕"), 1000);
      initializePhotoCarousels();
     setInterval(() => createBalloon(false), 3000);
     setTimeout(startMinorConfetti, 1500);
