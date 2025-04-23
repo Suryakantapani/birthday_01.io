@@ -753,3 +753,15 @@ h1 {
     border: none;
     border-radius: 20px;
 }
+#leftPhotoFrame .photo-track {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+#leftPhotoFrame .photo-slide {
+    flex: 0 0 auto;
+    width: 200px;  
+    margin-right: 10px;
+}

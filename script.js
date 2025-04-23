@@ -397,3 +397,19 @@ window.addEventListener('load', () => {
         document.addEventListener('click', enableAudio);
     });
 });
+const photoTrack = document.querySelector('#leftPhotoFrame .photo-track');
+const slides = document.querySelectorAll('#leftPhotoFrame .photo-slide');
+let currentIndex = 0;
+
+setInterval(() => {
+    currentIndex++;
+    if (currentIndex >= slides.length) {
+        currentIndex = 0;
+    }
+
+    const scrollAmount = slides[0].offsetWidth + 10; // width + margin
+    photoTrack.scrollTo({
+        left: currentIndex * scrollAmount,
+        behavior: 'smooth'
+    });
+}, 3000);
